@@ -43,7 +43,12 @@ export async function getServerSideProps(context) {
   const { query } = context
   const { q = '' } = query
 
-  const { results } = await search({ query: q })
+  let results = []
+
+  if (q !== '') {
+    const { results: r } = await search({ query: q })
+    results = r
+  }
 
   return {
     props: {

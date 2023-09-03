@@ -8,7 +8,6 @@ export default function Header({ isHome }) {
 
   const menuItems = [
     "Home",
-    "About",
     "Search",
     "Api",
   ]
@@ -23,23 +22,21 @@ export default function Header({ isHome }) {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <Link href='/' className="text-inherit">🖍️ <span className="text-black font-bold">Next</span>XKCD</Link>
+          <Link href={`/${locale}`} locale={locale} className="text-inherit">
+            🖍️ <span className="text-black font-bold">Next</span>
+            XKCD
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="/">
+          <Link color="foreground" href={`/${locale}`} locale={locale}>
             Home
           </Link>
         </NavbarItem>
-        <NavbarItem >
-          <Link color="foreground" href="/about">
-            About
-          </Link>
-        </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/search">
+          <Link color="foreground" href={`/${locale}/search`}>
             Search
           </Link>
         </NavbarItem>
