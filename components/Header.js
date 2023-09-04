@@ -1,14 +1,16 @@
-import {NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Navbar, NavbarBrand, NavbarContent, NavbarItem, Link} from "@nextui-org/react"
+import {NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, menu} from "@nextui-org/react"
 import {useState} from "react"
 import { useRouter } from "next/router"
+import { use18N } from "context/i18n"
 
 export default function Header({ isHome }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const {locale, locales} = useRouter()
+  const { t } = use18N()
 
   const menuItems = [
-    "Home",
-    "Search",
+    t("HOME_NAV_ITEM"),
+    t("SEARCH_NAV_ITEM"),
     "Api",
   ]
 
@@ -32,21 +34,25 @@ export default function Header({ isHome }) {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link color="foreground" href={`/${locale}`} locale={locale}>
-            Home
+            {menuItems[0]}
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href={`/${locale}/search`}>
-            Search
+            {menuItems[1]}
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className={`${isHome ? 'flex': 'hidden'} text-black`}>
-          <Link href={`/${restOfLocales[0]}`} locale={restOfLocales[0]} >{restOfLocales[0]}</Link>
+          <Link href={`/${restOfLocales[0]}`} locale={restOfLocales[0]} >
+            {restOfLocales[0]}
+          </Link>
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
-          <Link href="/api/search" target="_blank">Api</Link>
+          <Link href="/api/search" target="_blank">
+            {menuItems[2]}
+          </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>

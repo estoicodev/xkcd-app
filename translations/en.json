@@ -1,4 +1,9 @@
 {
   "LATEST_COMICS": "Latest comics",
-  "SEARCH_RESULTS_TITLE": "$0 results for '$1'"
+  "SEARCH_RESULTS_TITLE": "$0 results for '$1'",
+  "HOME_NAV_ITEM": "Home",
+  "SEARCH_NAV_ITEM": "Search",
+  "SEARCH_BUTTON_TEXT": "Search",
+  "FOOTER_TEXT": "Redesign by $0 for $1",
+  "MESSAGE_TO_SEARCH_COMICS": "Type something to search comics..."
 }

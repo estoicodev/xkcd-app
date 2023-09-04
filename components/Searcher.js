@@ -1,7 +1,10 @@
 import SearchIcon from "components/SearchIcon";
 import {Button, Input} from "@nextui-org/react";
+import {use18N} from "context/i18n";
 
 export default function Searcher({ className, onSearch, searchQuery, setSearchQuery }) {
+  const { t } = use18N()
+
   return (
     <div className={className}>
       <Input
@@ -37,7 +40,7 @@ export default function Searcher({ className, onSearch, searchQuery, setSearchQu
           <Button onClick={() => {
             if (searchQuery !== '') onSearch()
           }} size="md" variant="solid" className="text-base text-black/60 bg-slate-200 border-slate-500 border-2">
-            Search
+            {t("SEARCH_BUTTON_TEXT")}
           </Button>
         }
       />

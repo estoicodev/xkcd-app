@@ -20,7 +20,7 @@ export default function Search({ query, results }) {
   return (
     <Layout title={`Resultados de búsqueda para "${query}"`}>
       <Searcher className="w-full max-w-lg mt-6 mx-auto" onSearch={handleSearch} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
-      {query === '' && <h1 className='text-center text-xl font-semibold mt-10 mb-6 mx-4'>Search a comic... ⬆️</h1>}
+      {query === '' && <h1 className='text-center text-xl font-semibold mt-10 mb-6 mx-4'>{t("MESSAGE_TO_SEARCH_COMICS")}</h1>}
       {
         query !== '' &&
         <h1 className='text-xl font-semibold mt-10 mb-6 mx-4'>
