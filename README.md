@@ -1,20 +1,26 @@
 # xkcd App
 
-A minimalist modern way to see [xkcd Comics](https://xkcd.com/).
+Una forma moderna y minimalista de ver [xkcd Comics](https://xkcd.com/).
 
-## Deploy
+## Links
 
-- [Vercel deploy](https://xkcd-app-olive.vercel.app/)
+- [Deploy](https://xkcd-app-olive.vercel.app/)
 
-## Use like a template
+## Tecnologías
 
-You can fork this xkcd-app project to add your own functionalities.
-Pull the environment variables from vercel (need to install [vercel cli](https://vercel.com/docs/cli)):
+- Next.js
+- Tailwind
+- Algolia (API)
+
+## Usar como template
+
+Puede hacer fork a este proyecto para agregar sus propias funcionalidades.
+Extraiga las variables de entorno de vercel (es necesario instalar [vercel cli] (https://vercel.com/docs/cli)):
 
 ```shell
 vercel pull --env .env.local
 ```
 
-## Author
+## Autor
 
 - estoicodev - <vmcarrasco2810@gmail.com>
